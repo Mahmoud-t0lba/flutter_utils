@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+/// Cubit
 class ThemeCubit extends Cubit<ThemeState> {
   ThemeCubit() : super(const ThemeState(themeMode: ThemeMode.system));
   static ThemeCubit get(context) => BlocProvider.of(context);
@@ -19,6 +20,7 @@ class ThemeCubit extends Cubit<ThemeState> {
     }
   }
 
+  /// save theme to local
   Future<void> setThemeMode(ThemeMode themeMode) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('theme_mode', themeMode.toString());
@@ -38,6 +40,7 @@ class ThemeCubit extends Cubit<ThemeState> {
   }
 }
 
+/// State
 class ThemeState extends Equatable {
   final ThemeMode themeMode;
 
@@ -47,6 +50,7 @@ class ThemeState extends Equatable {
   List<Object?> get props => [themeMode];
 }
 
+/// BlocObserver to follow current state
 class ThemeObserver extends BlocObserver {
   @override
   void onChange(BlocBase bloc, Change change) {
