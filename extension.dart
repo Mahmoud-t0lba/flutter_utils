@@ -11,14 +11,6 @@ extension MediaQueryExtension on BuildContext {
   double get width => MediaQuery.of(this).size.width;
 }
 
-extension Height on Widget {
-  double get sHeight => MediaQuery.of(MagicRouter.currentContext!).size.height;
-}
-
-extension Width on Widget {
-  double get sWidth => MediaQuery.of(MagicRouter.currentContext!).size.width;
-}
-
 extension StringExtension on String {
   String get capitalize => isNotEmpty ? this[0].toUpperCase() + substring(1) : this;
 }
