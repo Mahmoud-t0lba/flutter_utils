@@ -6,12 +6,17 @@ extension SizeExtension on num {
   SizedBox get w => SizedBox(width: toDouble());
 }
 
+extension MediaQueryExtension on BuildContext {
+  double get height => MediaQuery.of(this).size.height;
+  double get width => MediaQuery.of(this).size.width;
+}
+
 extension Height on Widget {
-  double get qHeight => MediaQuery.of(MagicRouter.currentContext!).size.height;
+  double get sHeight => MediaQuery.of(MagicRouter.currentContext!).size.height;
 }
 
 extension Width on Widget {
-  double get qWidth => MediaQuery.of(MagicRouter.currentContext!).size.width;
+  double get sWidth => MediaQuery.of(MagicRouter.currentContext!).size.width;
 }
 
 extension StringExtension on String {
