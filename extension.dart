@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'router.dart';
+import 'size_config.dart';
 
 extension SizeExtension on num {
-  SizedBox get h => SizedBox(height: toDouble());
-  SizedBox get w => SizedBox(width: toDouble());
+  SizedBox get hBox => SizedBox(height: toDouble());
+  SizedBox get wBox => SizedBox(width: toDouble());
+  ///
+  double get h => SizeConfig.getHeight(toDouble());
+  double get w => SizeConfig.getWidth(toDouble());
+  double get sp => SizeConfig.getTextSize(toDouble());
 }
 
 extension MediaQueryExtension on BuildContext {
