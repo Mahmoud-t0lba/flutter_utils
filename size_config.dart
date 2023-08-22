@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// TODO : just call => SizeConfig.init(context); => in build widget
 class SizeConfig {
   static BuildContext? appContext;
   static MediaQueryData? _mediaQueryData;
