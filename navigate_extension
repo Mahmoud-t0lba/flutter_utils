@@ -1,0 +1,50 @@
+/// Usage : 
+/// call this function from any Pressed from context to navigate to your target screen like this :
+/// context.toScreen(const TargetScreen());
+
+extension NavigateExtension on BuildContext {
+  toScreen(Widget screen, {Object? arguments}) {
+    Navigator.push(
+      this,
+      MaterialPageRoute(
+        builder: (context) => screen,
+        settings: RouteSettings(arguments: arguments),
+      ),
+    );
+  }
+
+  toScreenWithReplacement(Widget screen, {Object? arguments}) {
+    Navigator.pushReplacement(
+        this,
+        MaterialPageRoute(
+          builder: (context) => screen,
+          settings: RouteSettings(arguments: arguments),
+        ));
+  }
+
+  toScreenWithClearStack(Widget screen, {Object? arguments}) {
+    Navigator.pushAndRemoveUntil(
+        this,
+        MaterialPageRoute(
+          builder: (context) => screen,
+          settings: RouteSettings(arguments: arguments),
+        ),
+        (Route<dynamic> route) => false);
+  }
+
+  toScreenWithClearStackAndReplace(Widget screen, {Object? arguments}) {
+    Navigator.pushAndRemoveUntil(
+        this,
+        MaterialPageRoute(
+          builder: (context) => screen,
+          settings: RouteSettings(arguments: arguments),
+        ),
+        (Route<dynamic> route) => false);
+  }
+
+  toNamedScreen(String routeName, {Object? arguments}) =>
+      Navigator.pushNamed(this, routeName, arguments: arguments);
+
+  toNamedScreenWithReplacement(String routeName, {Object? arguments}) =>
+      Navigator.pushReplacementNamed(this, routeName, arguments: arguments);
+}
