@@ -1,0 +1,4 @@
+pm.test("Save TOken TO GLobal", function () {
+    var jsonData = pm.response.json();
+    pm.globals.set("authorization", jsonData.data.access_token);
+});
