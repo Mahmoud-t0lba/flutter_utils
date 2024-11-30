@@ -1,23 +1,3 @@
-<div align="center">
-  <img alt="flutter ios 16 live activities" src="https://raw.githubusercontent.com/istornz/live_activities/main/images/logo.webp" />
-</div>
-<br />
-
-<div align="center" style="display: flex;align-items: center;justify-content: center;">
-  <a href="https://pub.dev/packages/live_activities"><img src="https://img.shields.io/pub/points/live_activities?style=for-the-badge" style="margin-right: 10px" /></a>
-  <a href="https://pub.dev/packages/live_activities"><img src="https://img.shields.io/pub/likes/live_activities?style=for-the-badge" style="margin-right: 10px" /></a>
-  <a href="https://pub.dev/packages/live_activities"><img src="https://img.shields.io/pub/popularity/live_activities?style=for-the-badge" style="margin-right: 10px" /></a>
-  <a href="https://pub.dev/packages/live_activities"><img src="https://img.shields.io/pub/v/live_activities?style=for-the-badge" style="margin-right: 10px" /></a>
-  <a href="https://github.com/istornz/live_activities"><img src="https://img.shields.io/github/stars/istornz/live_activities?style=for-the-badge" /></a>
-</div>
-<br />
-
-<div align="center">
-  <a href="https://radion-app.com" target="_blank" alt="Radion - Ultimate gaming app">
-    <img src="https://raw.githubusercontent.com/istornz/live_activities/main/images/radion.webp" width="600px" alt="Radion banner - Ultimate gaming app" />
-  </a>
-</div>
-<br />
 
 A Flutter plugin to use iOS 16.1+ **Live Activities** & iPhone 14 Pro **Dynamic Island** features.
 
